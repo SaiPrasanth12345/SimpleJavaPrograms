@@ -2,10 +2,14 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        System.out.println("Try programiz.pro");
+        String str = "Thanks for comming to Party";
+
+        List<String> strList = Arrays.asList(str.split(" "));
+        System.out.println(strList.size());
         
-        List<String> strList = new ArrayList<>();
-        Collections.addAll(strList, "Thanks", "For", "Comming","to","Party");
+        strList.sort((s1, s2) -> s2.length() - s1.length());
+        
+        strList.forEach(s -> System.out.println(s));
         
         System.out.println(strList.size());
 
